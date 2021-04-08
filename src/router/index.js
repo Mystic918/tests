@@ -4,6 +4,10 @@ import Home from "../views/Home.vue";
 
 Vue.use(VueRouter);
 
+// 1、home中组件未进行懒加载
+// 2、about 、 nextTick 使用懒加载 并指定打包文件名为webpackChunkName，如果不指定，则以但文件打包
+
+
 const routes = [
   {
     path: "/",
@@ -13,11 +17,24 @@ const routes = [
   {
     path: "/about",
     name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/About.vue"),
+  },
+  {
+    path: "/nextTick",
+    name: "nextTick",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/nextTick.vue"),
+  },
+  {
+    path: "/directives",
+    name: "directives",
+    component: resolve => require(['../views/directives.vue'],resolve),
+  },
+  {
+    path: "/nextTick2",
+    name: "nextTick2",
+    component: resolve => require(['../views/nextTick2.vue'],resolve),
   },
 ];
 
