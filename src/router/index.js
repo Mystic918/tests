@@ -36,6 +36,16 @@ const routes = [
     name: "nextTick2",
     component: resolve => require(['../views/nextTick2.vue'],resolve),
   },
+  {
+    path: "/vmodel",
+    name: "vmodel",
+    component: resolve => require(['../views/vmodel.vue'],resolve),
+  },
+  {
+    path: "/vmodel2",
+    name: "vmodel2",
+    component: resolve => require(['../views/vmodel2.vue'],resolve),
+  },
 ];
 
 const router = new VueRouter({

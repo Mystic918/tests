@@ -5,6 +5,9 @@
       <router-link to="/about">About</router-link>|
       <router-link to="/nextTick">nextTick</router-link>|
       <router-link to="/directives">directives</router-link>|
+      <router-link to="/vmodel">vmodel</router-link>|
+      <router-link to="/vmodel2">vmodel2</router-link>|
+      
     </div>
     <router-view />
   </div>
