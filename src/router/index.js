@@ -7,7 +7,6 @@ Vue.use(VueRouter);
 // 1、home中组件未进行懒加载
 // 2、about 、 nextTick 使用懒加载 并指定打包文件名为webpackChunkName，如果不指定，则以但文件打包
 
-
 const routes = [
   {
     path: "/",
@@ -29,22 +28,22 @@ const routes = [
   {
     path: "/directives",
     name: "directives",
-    component: resolve => require(['../views/directives.vue'],resolve),
+    component: (resolve) => require(["../views/directives.vue"], resolve),
   },
   {
     path: "/nextTick2",
     name: "nextTick2",
-    component: resolve => require(['../views/nextTick2.vue'],resolve),
+    component: (resolve) => require(["../views/nextTick2.vue"], resolve),
   },
   {
     path: "/vmodel",
     name: "vmodel",
-    component: resolve => require(['../views/vmodel.vue'],resolve),
+    component: (resolve) => require(["../views/vmodel.vue"], resolve),
   },
   {
     path: "/vmodel2",
     name: "vmodel2",
-    component: resolve => require(['../views/vmodel2.vue'],resolve),
+    component: (resolve) => require(["../views/vmodel2.vue"], resolve),
   },
 ];
 

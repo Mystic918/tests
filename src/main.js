@@ -4,11 +4,11 @@ import router from "./router";
 import store from "./store";
 
 //懒加载 插件
-import lazy from './directives/lazy/index.js'
+import lazy from "./directives/lazy/index.js";
 
 Vue.config.productionTip = false;
 //注册
-Vue.use(lazy)
+Vue.use(lazy);
 new Vue({
   router,
   store,
